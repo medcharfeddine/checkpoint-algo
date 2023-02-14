@@ -1,0 +1,24 @@
+ALGORITHM sentence
+VAR
+    i, char_count, word_count, vowel_count : INTEGER
+    str : STRING
+    char_count := 0
+    word_count := 1
+    vowel_count := 0
+
+BEGIN
+    write ("The String is: ", str);
+    read (str);
+    FOR i FROM 0 TO i.length-1 DO
+        IF str[i] = ["a", "e", "i", "o", "u"] THEN
+            vowel_count := vowel_count + 1
+        END IF
+        IF str[i] = " " OR str[i] = "." THEN
+            word_count := word_count + 1
+        END_IF
+        char_count := char_count + 1
+    END_FOR
+    OUTPUT "Length of characters: " + char_count
+    OUTPUT "Number of words: " + word_count
+    OUTPUT "Number of vowels: " + vowel_count
+END
