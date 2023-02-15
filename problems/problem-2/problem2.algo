@@ -1,0 +1,19 @@
+ALGORITHM  Product
+VAR
+    v1, v2 : ARRAY_OF INTEGER;
+    ps : INTEGER;
+BEGIN
+    IF (dot_product) THEN
+        ps := 0;
+        write ("the sum is orthogonal");
+    END_IF
+END
+
+PROCEDURE dot_product(v1, v2)
+VAR
+    n := v1.length-1
+BEGIN
+    FOR i FROM 0 TO n STEP 1  DO
+        ps := ps + v1[i] * v2[i]
+    END_FOR
+END
