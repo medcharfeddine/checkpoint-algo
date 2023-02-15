@@ -18,7 +18,7 @@ BEGIN
         END_IF
         char_count := char_count + 1
     END_FOR
-    OUTPUT "Length of characters: " + char_count
-    OUTPUT "Number of words: " + word_count
-    OUTPUT "Number of vowels: " + vowel_count
+    write "Length of characters: " + char_count
+    write "Number of words: " + word_count
+    write "Number of vowels: " + vowel_count
 END
