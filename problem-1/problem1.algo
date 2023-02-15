@@ -1,22 +1,31 @@
-ALGORITHM prblm
+ALGORITHM sum_of_two_elements
 VAR
     i, sum : INTEGER := 0;
     tab : ARRAY_OF INTEGER;
     tab2 : ARRAY_OF INTEGER;
 BEGIN
+
     FOR i FROM 0 TO tab.length-1 STEP 1  DO
+        b : BOOLEAN := false
         FOR j FROM 0 TO tab2.length-1 STEP 1  DO
-            IF (tab[i] <> tab2[j]) THEN
-                sum := sum + tab[i];
+            IF (tab[i] = tab2[j]) THEN
+                b := true
             END_IF
         END_FOR
+        IF (b = false) THEN
+            sum := sum + tab[i]
+        END_IF
     END_FOR
     FOR j FROM 0 TO tab2.length-1 STEP 1  DO
+        b : BOOLEAN := false;
         FOR i FROM 0 TO tab.length-1 STEP 1  DO
-            IF (tab[j] <> tab[i]) THEN
-                sum : sum + tab[j]
+            IF (tab[j] = tab[i]) THEN
+                b := true
             END_IF
         END_FOR
+        IF (b = false) THEN
+            sum := sum + tab2[j];
+        END_IF
     END_FOR
-    write (sum);
+    write "the sum is: " + sum;
 END
